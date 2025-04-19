@@ -11,14 +11,13 @@ export default function Login() {
   const [userType, setUserType] = useState('customer'); // 'customer' or 'maid'
 
   const handleLogin = () => {
-    // Here we would normally handle the login logic
-    // For now, just navigate to the appropriate dashboard
+    // Here we would normally handle the login logic with authentication
+    
+    // Navigate to the appropriate dashboard based on user type
     if (userType === 'customer') {
-      // Navigate to customer dashboard
-    //   router.push('/customer/dashboard');
+      router.push('/customer/dashboard');
     } else {
-      // Navigate to maid dashboard
-    //   router.push('/maid/dashboard');
+      router.push('/maid/dashboard');
     }
   };
 
@@ -169,5 +168,5 @@ const styles = StyleSheet.create({
   backButtonText: {
     fontSize: 16,
     color: '#4a90e2',
-  },
+  }
 });
