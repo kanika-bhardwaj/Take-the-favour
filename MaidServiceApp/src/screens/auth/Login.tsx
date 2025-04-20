@@ -4,6 +4,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { TextInput } from 'react-native';
 import { router } from 'expo-router';
+// import CustomerDashboard from '@/app/customer/dashboard';
+// import MaidDashboard from '@/app/maid/dashboard';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -15,9 +17,9 @@ export default function Login() {
     
     // Navigate to the appropriate dashboard based on user type
     if (userType === 'customer') {
-      router.push('/customer/dashboard');
+      router.push('/');
     } else {
-      router.push('/maid/dashboard');
+      router.push('/');
     }
   };
 
